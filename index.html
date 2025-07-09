@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Map of Nepal</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Choropleth Map of Nepal with  Provinces and Districts Wise</h1>
+        </header>
+        
+        <div class="controls-panel">
+            <div class="basemap-controls">
+                <h3>Base Maps</h3>
+                <button id="osm-btn" class="basemap-btn active">OpenStreetMap</button>
+                <button id="satellite-btn" class="basemap-btn">Satellite</button>
+                <button id="terrain-btn" class="basemap-btn">Terrain</button>
+            </div>
+            
+            <div class="layer-controls">
+                <h3>Administrative Layers</h3>
+                <label><input type="checkbox" id="province-layer" checked> Province Boundaries</label>
+                <label><input type="checkbox" id="district-layer" checked> District Boundaries</label>
+                <label><input type="checkbox" id="local-layer" checked> Local Level Boundaries</label>
+            </div>
+            
+            <div class="choropleth-controls">
+                <h3>Population Choropleth</h3>
+                <button id="district-choropleth-btn" class="tool-btn">District Population Map</button>
+                <button id="province-choropleth-btn" class="tool-btn">Province Population Map</button>
+                <button id="reset-colors-btn" class="tool-btn">Reset Colors</button>
+            </div>
+            
+            <div class="basic-controls">
+                <h3>Map Controls</h3>
+                <button id="reset-btn" class="tool-btn">Reset View</button>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div id="info-panel">
+            <h3>Feature Information</h3>
+            <div id="feature-info">Click on any boundary to see population information</div>
+        </div>
+    </div>
+    
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Population Data -->
+    <script src="js/population-data.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
