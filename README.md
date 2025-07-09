@@ -1,5 +1,5 @@
-HTML
-Javascript
-CSS
-GeoJSON
+HTML,
+Javascript,
+CSS,
+GeoJSON,
 Population Data
